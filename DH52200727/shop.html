@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - MUSIN Music Co.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="est">EST. 1946</span>
+                    <span class="brand-name">MUSIN</span>
+                    <span class="sub-name">MUSIC CO.</span>
+                </a>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <a href="login.html" class="login-link"><i class="far fa-user"></i> Đăng nhập</a>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="shop.html" class="active">CỬA HÀNG</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="lab.html">LAB THỰC HÀNH</a></li>
+            </ul>
+        </div>
+        
+        <div class="cart-container">
+            <a href="#" class="cart-icon" id="cart-btn">
+                <div class="cart-icon-wrapper">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </div>
+                <span class="cart-text">Giỏ hàng</span>
+            </a>
+            
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div id="cart-items-list">
+                    </div>
+                <div class="cart-summary">
+                    <div class="total-row">
+                        <span>Tổng:</span>
+                        <strong id="total-price">0 đ</strong>
+                    </div>
+                    <a href="cart.html" class="btn-dropdown-black">Thanh Toán</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Tìm kiếm sản phẩm hoặc thương hiệu">
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-container">
+        <aside class="shop-sidebar">
+    <h2 class="sidebar-title">DANH MỤC</h2>
+    <ul class="category-list">
+        <li>
+            <a href="#" class="filter-btn active" data-filter="all">
+                <span class="cate-name">Tất cả sản phẩm</span>
+                <span class="cate-count">(10)</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter-btn" data-filter="acoustic">
+                <span class="cate-name">Guitar Acoustic</span>
+                <i class="fas fa-chevron-right cate-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter-btn" data-filter="electric">
+                <span class="cate-name">Guitar Điện</span>
+                <i class="fas fa-chevron-right cate-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter-btn" data-filter="piano">
+                <span class="cate-name">Đàn Piano Cơ / Điện</span>
+                <i class="fas fa-chevron-right cate-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter-btn" data-filter="drum">
+                <span class="cate-name">Bộ Trống Cơ / Điện Tử</span>
+                <i class="fas fa-chevron-right cate-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter-btn" data-filter="tradition">
+                <span class="cate-name">Nhạc cụ Truyền thống</span>
+                <i class="fas fa-chevron-right cate-icon"></i>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+        <main class="shop-content">
+            <section class="new-products-section" style="width: 100%; margin: 0;">
+                <div class="products-grid">
+                    
+                    <div class="product-card" data-category="acoustic">
+                        <div class="product-img"><img src="img/product1.jpg" alt="Guitar"></div>
+                        <div class="product-info">
+                            <span class="product-brand">TAYLOR</span>
+                            <h3 class="product-name">Guitar Acoustic Taylor Academy Series</h3>
+                            <p class="product-price">18.500.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p1', 'Guitar Acoustic Taylor Academy Series', 18500000, 'img/product1.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="electric">
+                        <div class="product-img"><img src="img/product2.jpg" alt="Guitar"></div>
+                        <div class="product-info">
+                            <span class="product-brand">ESP LTD</span>
+                            <h3 class="product-name">Guitar Điện LTD Eclipse Black Satin</h3>
+                            <p class="product-price">22.900.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p2', 'Guitar Điện LTD Eclipse Black Satin', 22900000, 'img/product2.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="piano">
+                        <div class="product-img"><img src="img/product3.jpg" alt="Piano"></div>
+                        <div class="product-info">
+                            <span class="product-brand">YAMAHA</span>
+                            <h3 class="product-name">Đàn Piano Cơ Upright Yamaha U1J</h3>
+                            <p class="product-price">94.000.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p3', 'Đàn Piano Cơ Upright Yamaha U1J', 94000000, 'img/product3.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="drum">
+                        <div class="product-img"><img src="img/product4.jpg" alt="Trống"></div>
+                        <div class="product-info">
+                            <span class="product-brand">PEARL</span>
+                            <h3 class="product-name">Bộ Trống Cơ Pearl Export Series</h3>
+                            <p class="product-price">35.200.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p4', 'Bộ Trống Cơ Pearl Export Series', 35200000, 'img/product4.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="tradition">
+                        <div class="product-img"><img src="img/product5.jpg" alt="Sáo"></div>
+                        <div class="product-info">
+                            <span class="product-brand">VIỆT NAM</span>
+                            <h3 class="product-name">Sáo Trúc Nứa Tự Nhiên Cao Cấp</h3>
+                            <p class="product-price">450.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p5', 'Sáo Trúc Nứa Tự Nhiên Cao Cấp', 450000, 'img/product5.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="acoustic">
+                        <div class="product-img"><img src="img/product6.jpg" alt="Guitar"></div>
+                        <div class="product-info">
+                            <span class="product-brand">CORDOBA</span>
+                            <h3 class="product-name">Guitar Cổ Điển Classical Cordoba C5</h3>
+                            <p class="product-price">7.300.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p6', 'Guitar Cổ Điển Classical Cordoba C5', 7300000, 'img/product6.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="piano">
+                        <div class="product-img"><img src="img/product7.jpg" alt="Piano"></div>
+                        <div class="product-info">
+                            <span class="product-brand">ROLAND</span>
+                            <h3 class="product-name">Đàn Piano Điện Roland RP-107</h3>
+                            <p class="product-price">19.800.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p7', 'Đàn Piano Điện Roland RP-107', 19800000, 'img/product7.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="drum">
+                        <div class="product-img"><img src="img/product8.jpg" alt="Trống"></div>
+                        <div class="product-info">
+                            <span class="product-brand">ALESIS</span>
+                            <h3 class="product-name">Bộ Trống Điện Tử Alesis Nitro Max</h3>
+                            <p class="product-price">14.650.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p8', 'Bộ Trống Điện Tử Alesis Nitro Max', 14650000, 'img/product8.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="tradition">
+                        <div class="product-img"><img src="img/product9.jpg" alt="Sáo"></div>
+                        <div class="product-info">
+                            <span class="product-brand">ĐÔNG ĐÔ</span>
+                            <h3 class="product-name">Sáo Khúc Bạch Ngọc Khớp Inox</h3>
+                            <p class="product-price">680.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p9', 'Sáo Khúc Bạch Ngọc Khớp Inox', 680000, 'img/product9.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="acoustic">
+                        <div class="product-img"><img src="img/product10.jpg" alt="Ukulele"></div>
+                        <div class="product-info">
+                            <span class="product-brand">HARMONY</span>
+                            <h3 class="product-name">Đàn Ukulele Gỗ Sapele Tự Nhiên</h3>
+                            <p class="product-price">1.250.000 ₫</p>
+                            <button class="btn-add-to-cart" onclick="addToCart('p10', 'Đàn Ukulele Gỗ Sapele Tự Nhiên', 1250000, 'img/product10.jpg')">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col font-brand">
+                <h4>MUSIN MUSIC CO.</h4>
+                <p>Thương hiệu phân phối và bán lẻ nhạc cụ cao cấp toàn quốc. Cam kết 100% sản phẩm chính hãng.</p>
+            </div>
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <p>📍 180 Cao Lỗ, Phường 4, Quận 8, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Musin Music Store. All rights reserved.</p>
+            <p class="student-info">Họ và tên: <strong>Lương Công Hội</strong> | MSSV: <strong>DH52200727</strong></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Đổi trạng thái active class trên menu bên trái
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex'; // Trả về dạng flex tương thích thiết kế lưới card
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

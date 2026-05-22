@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - MUSIN Music Co.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="est">EST. 1946</span>
+                    <span class="brand-name">MUSIN</span>
+                    <span class="sub-name">MUSIC CO.</span>
+                </a>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <a href="login.html" class="login-link active"><i class="far fa-user"></i> Đăng nhập</a>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="shop.html">CỬA HÀNG</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="lab.html">LAB THỰC HÀNH</a></li>
+            </ul>
+        </div>
+        
+        <div class="cart-container">
+            <a href="#" class="cart-icon" id="cart-btn">
+                <div class="cart-icon-wrapper">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </div>
+                <span class="cart-text">Giỏ hàng</span>
+            </a>
+            
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div id="cart-items-list">
+                    </div>
+                <div class="cart-summary">
+                    <div class="total-row">
+                        <span>Tổng:</span>
+                        <strong id="total-price">0 đ</strong>
+                    </div>
+                    <a href="cart.html" class="btn-dropdown-black">Thanh Toán</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Tìm kiếm sản phẩm hoặc thương hiệu">
+            </div>
+        </div>
+    </div>
+
+    <main class="login-main-container" style="display: flex; justify-content: center; align-items: center; min-height: 550px; background-color: #FAF8F5; padding: 40px 20px;">
+        <div class="auth-box" style="background: #ffffff; width: 100%; max-width: 420px; padding: 40px 35px; border-radius: 8px; border: 1px solid #EFECE6; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+            
+            <div class="auth-header" style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 22px; font-weight: 700; color: #111111; letter-spacing: 1px; margin-bottom: 8px;">ĐĂNG NHẬP</h2>
+                <p style="font-size: 13px; color: #777777;">Chào mừng bạn quay trở lại với Musin Co.</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="username" style="display: block; font-size: 12px; font-weight: 600; color: #111111; margin-bottom: 8px; letter-spacing: 0.5px;">TÊN ĐĂNG NHẬP / EMAIL</label>
+                    <div class="input-wrapper" style="position: relative;">
+                        <i class="far fa-envelope" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #999999; font-size: 14px;"></i>
+                        <input type="text" id="username" required placeholder="Nhập tài khoản hoặc email" style="width: 100%; padding: 12px 15px 12px 42px; font-size: 13px; border: 1px solid #CCCCCC; border-radius: 4px; outline: none; font-family: 'Montserrat', sans-serif; transition: all 0.3s ease;">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="password" style="display: block; font-size: 12px; font-weight: 600; color: #111111; margin-bottom: 8px; letter-spacing: 0.5px;">MẬT KHẨU</label>
+                    <div class="input-wrapper" style="position: relative;">
+                        <i class="fas fa-lock" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #999999; font-size: 14px;"></i>
+                        <input type="password" id="password" required placeholder="Nhập mật khẩu" style="width: 100%; padding: 12px 15px 12px 42px; font-size: 13px; border: 1px solid #CCCCCC; border-radius: 4px; outline: none; font-family: 'Montserrat', sans-serif; transition: all 0.3s ease;">
+                    </div>
+                </div>
+
+                <div class="form-options" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                    <label style="display: flex; align-items: center; font-size: 12px; color: #555555; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 6px; accent-color: #111111;"> Ghi nhớ đăng nhập
+                    </label>
+                    <a href="#" style="font-size: 12px; color: #111111; text-decoration: none; font-weight: 500;">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" style="width: 100%; padding: 14px; background: #111111; color: #ffffff; border: none; border-radius: 4px; font-size: 13px; font-weight: 600; letter-spacing: 1px; cursor: pointer; text-transform: uppercase; transition: background 0.3s ease; font-family: 'Montserrat', sans-serif;">
+                    Đăng Nhập
+                </button>
+            </form>
+
+            <div class="auth-footer" style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #EFECE6;">
+                <p style="font-size: 13px; color: #666666;">Chưa có tài khoản? <a href="#" style="color: #111111; font-weight: 600; text-decoration: none;">Đăng ký ngay</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col font-brand">
+                <h4>MUSIN MUSIC CO.</h4>
+                <p>Thương hiệu phân phối và bán lẻ nhạc cụ cao cấp toàn quốc. Cam kết 100% sản phẩm chính hãng.</p>
+            </div>
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <p>📍 180 Cao Lỗ, Phường 4, Quận 8, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Musin Music Store. All rights reserved.</p>
+            <p class="student-info">Họ và tên: <strong>Lương Công Hội</strong> | MSSV: <strong>DH52200727</strong></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+       function handleLogin(event) {
+    event.preventDefault(); // Ngăn chặn hành vi tải lại trang mặc định của form
+    
+    const user = document.getElementById('username').value.trim();
+    const pass = document.getElementById('password').value;
+
+    if (user === "" || pass === "") {
+        alert("Vui lòng điền đầy đủ tên đăng nhập và mật khẩu!");
+        return;
+    }
+
+    // Tài khoản giả lập kiểm tra hệ thống
+    const mockAdmin = { user: "admin", pass: "123456", name: "Quản Trị Viên" };
+    const mockUser = { user: "hoiluong", pass: "123456", name: "Lương Công Hội" };
+
+    if (user === mockAdmin.user && pass === mockAdmin.pass) {
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", mockAdmin.name);
+        localStorage.setItem("userRole", "admin");
+
+        alert("Đăng nhập tài khoản Quản trị thành công!");
+        window.location.href = "../admin/dashboard.html"; // Chuyển hướng vào trang quản lý Dashboard
+        
+    } else if (user === mockUser.user && pass === mockUser.pass) {
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", mockUser.name);
+        localStorage.setItem("userRole", "member");
+
+        alert(`Chào mừng thành viên ${mockUser.name} đã quay trở lại!`);
+        window.location.href = "../index.html"; // Chuyển hướng về trang chủ khách hàng
+        
+    } else {
+        alert("Tài khoản hoặc mật khẩu không chính xác. Vui lòng thử lại!");
+    }
+}
+
+    // Chỉ chạy hiệu ứng focus nếu tìm thấy ô input trên trang hiện tại
+    const authInputs = document.querySelectorAll('.input-wrapper input');
+    if (authInputs.length > 0) {
+        authInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.style.borderColor = '#111111';
+                input.style.boxShadow = '0 0 5px rgba(0,0,0,0.1)';
+            });
+            input.addEventListener('blur', () => {
+                input.style.borderColor = '#CCCCCC';
+                input.style.boxShadow = 'none';
+            });
+        });
+    }
+    </script>
+</body>
+</html>
