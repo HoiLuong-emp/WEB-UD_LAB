@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab05 - Bai 2 - Phân tích bố cục</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: sans-serif; 
+            background: #f4f4f4; 
+            padding: 20px; 
+            text-align: center; 
+            color: white; 
+            font-weight: bold; 
+        }
+
+        .container { 
+            max-width: 1170px; 
+            margin: 0 auto; 
+        }
+        
+        .row { 
+            display: flex; 
+            flex-wrap: wrap; 
+            margin: 0 -10px 15px -10px; 
+        }
+        [class*="col-"] { 
+            padding: 0 10px; 
+        }
+
+        .col-3 { flex: 0 0 25%; max-width: 25%; }
+        .col-6 { flex: 0 0 50%; max-width: 50%; }
+        .col-9 { flex: 0 0 75%; max-width: 75%; }
+        .col-12 { flex: 0 0 100%; max-width: 100%; }
+
+        .block { 
+            padding: 20px 10px; 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 60px; 
+        }
+
+        .header__top { 
+            background: #34495e; 
+            margin-bottom: 20px; 
+        }
+        
+        .header__logo { 
+            background: #e74c3c; 
+        }
+        .header__menu { 
+            background: #2ecc71; 
+        }
+        .header__cart { 
+            background: #f1c40f; 
+            color: #333; 
+        }
+
+        .hero__categories { 
+            background: #3498db; 
+            min-height: 350px; 
+        }
+        .hero__right_side { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        .search_bar_placeholder { 
+            background: #ecf0f1; 
+            color: #3498db; 
+            border: 2px solid #3498db; 
+            height: 60px; 
+        }
+        .banner__main { 
+            background: #9b59b6; 
+            flex-grow: 1; 
+            font-size: 24px; 
+        }
+
+        .banner__sub { 
+            background: #95a5a6; 
+            height: 150px; 
+            margin-top: 15px; 
+        }
+        
+        small { 
+            display: block; 
+            font-size: 11px; 
+            font-weight: normal;
+            margin-top: 5px; 
+        }
+        footer { 
+            background: #2f3640; 
+            padding: 20px; 
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="color: #333; margin-bottom: 20px;">SƠ ĐỒ BỐ CỤC DỰA TRÊN SOURCE CODE</h2>
+
+    <!-- Header Top -->
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><div class="block">TOP LEFT<br><small>(Email: hello@bookstore.com)</small></div></div>
+                <div class="col-6"><div class="block">TOP RIGHT<br><small>(Social, Language, Login)</small></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Main -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="block header__logo">LOGO<br><small>(.col-lg-3)</small></div>
+            </div>
+            <div class="col-6">
+                <div class="block header__menu">MENU NGANG<br><small>(.col-lg-6 - class: ul-menu)</small></div>
+            </div>
+            <div class="col-3">
+                <div class="block header__cart">GIỎ HÀNG<br><small>(.col-lg-3)</small></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="block hero__categories">MENU DỌC<br><small>(.hero__categories)</small></div>
+            </div>
+            <div class="col-9 hero__right_side">
+                <div class="block search_bar_placeholder">THANH TÌM KIẾM & HOTLINE</div>
+                <div class="block banner__main">BANNER CHÍNH</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6"><div class="block banner__sub">BANNER PHỤ 1</div></div>
+            <div class="col-6"><div class="block banner__sub">BANNER PHỤ 2</div></div>
+        </div>
+
+        <footer>FOOTER - THÔNG TIN LIÊN HỆ</footer>
+    </div>
+
+</body>
+</html>
