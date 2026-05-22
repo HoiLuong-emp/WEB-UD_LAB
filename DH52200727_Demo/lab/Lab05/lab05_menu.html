@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05_menu</title>
+    <style>
+        /* Menu Ngang */
+        .menu_ngang {
+            background-color: #55efc4;
+            list-style: none;
+            display: flex;
+            padding: 0;
+            width: 500px;
+
+        }
+        .menu_ngang li {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .menu_ngang li a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .menu_ngang li:hover {
+            background-color: #fdcb6e; 
+            border-radius: 5px;
+        }
+        .menu_ngang li a:hover{
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Menu Dọc */
+        .menu_doc {
+            width: 200px;
+            background-color: #0984e3; 
+            list-style: none;
+            padding: 0;
+        }
+        .menu_doc li {
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: 0.3s;
+        }
+        .menu_doc li a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .menu_doc li:hover {
+            background-color: #74b9ff; 
+        }
+        .menu_doc li a:hover{
+            font-style: italic; 
+            filter: brightness(130%);
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu_ngang">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+
+    <ul class="menu_doc">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+
+</body>
+</html>
